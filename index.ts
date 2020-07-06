@@ -1,6 +1,7 @@
 // read json file
+const fileToRead = "./file.json"
 const decoder = new TextDecoder("utf-8");
-const rawPosts = await Deno.readFile("./posts.json");
+const rawPosts = await Deno.readFile(fileToRead);
 let myPosts = decoder.decode(rawPosts); 
 
 // parse the json object and loop through it
